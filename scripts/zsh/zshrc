@@ -48,7 +48,7 @@ update()
 	if [[ "$@" == "" ]]; then
 		echo "If the download speed is too slow, try \"-a\" flag.\nYou can use \"-m\" to update mirrorlist or \"-r\" to purge orphans and outdated packages."&&yay -Syu&&sudo cp -r ~/.config/sanbox/files/* /&&sudo paccache -r&&sudo pacman -Rns $(pacman -Qtdq)
 	elif [[ "$@" == "-a" ]]; then
-		sudo echo ':: Synchronizing mirrorlist...'&&sudo reflector --verbose --latest 50 --sort rate --save /etc/pacman.d/mirrorlist&&yay -Syu&&sudo cp ~/.config/neucom-os/etc/* /etc&&sudo paccache -r&&sudo pacman -Rns $(pacman -Qtdq)
+		sudo echo ':: Synchronizing mirrorlist...'&&sudo reflector --verbose --latest 50 --sort rate --save /etc/pacman.d/mirrorlist&&yay -Syu&&sudo cp -r ~/.config/sanbox/files/* /&&sudo paccache -r&&sudo pacman -Rns $(pacman -Qtdq)
 	elif [[ "$@" == "-m" ]]; then
 		sudo echo ':: Synchronizing mirrorlist...'&&sudo reflector --verbose --latest 50 --sort rate --save /etc/pacman.d/mirrorlist&&echo "Done."
 	elif [[ "$@" == "-r" ]]; then

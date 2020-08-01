@@ -1,8 +1,0 @@
-## FILES ##
-dvorak-agna.map.gz	->	/usr/share/kbd/keymaps/i386/dvorak/dvorak-agna.map.gz
-Xmodmap	->	~/.Xmodmap
-us	->	/usr/share/X11/xkb/symbols/us
-zshrc	->	~/.zshrc
-
-## COMMANDS ##
-ln -s /bin/vim /bin/v

@@ -1,0 +1,5 @@
+NAME="Sanbox"
+PRETTY_NAME="Sanbox"
+ID=sanbox
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"

@@ -1,0 +1,3 @@
+files/ will be copied onto the system on every update.
+
+scripts/ must be executed by the user to install features.

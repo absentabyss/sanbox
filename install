@@ -1,3 +1,4 @@
 dvorak-agna.map.gz	->	/usr/share/kbd/keymaps/i386/dvorak/dvorak-agna.map.gz
-Xmodmap				->	~/.Xmodmap
-us					->	/usr/share/X11/xkb/symbols/us
+Xmodmap	->	~/.Xmodmap
+us	->	/usr/share/X11/xkb/symbols/us
+zshrc	->	~/.zshrc

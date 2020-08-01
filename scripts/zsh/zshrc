@@ -6,17 +6,17 @@ c()
 
 env.c()
 {
-	cp -n /home/agna/.local/etc/c/*(DN) .
+	cp -n /home/agna/.config/sanbox/files/yard/c/*(DN) .
 }
 
 env.cpp()
 {
-	cp -n /home/agna/.local/etc/cpp/*(DN) .
+	cp -n /home/agna/.config/sanbox/files/yard/cpp/*(DN) .
 }
 
 env.js()
 {
-	cp -n /home/agna/.local/etc/js/*(DN) .
+	cp -n /home/agna/.config/sanbox/files/yard/js/*(DN) .
 }
 
 f()

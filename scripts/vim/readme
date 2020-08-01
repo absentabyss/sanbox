@@ -1,1 +1,5 @@
 Use gvim to access Xorg clipboard.
+
+Run :PluginInstall.
+
+Read the installation documentation for every plugin as they aren't all installed with :PluginInstall.

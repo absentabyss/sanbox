@@ -1,0 +1,2 @@
+Configuration of simple stateful firewall.
+Use sshguard if this computer is an ssh server.

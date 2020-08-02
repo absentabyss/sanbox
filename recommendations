@@ -1,0 +1,1 @@
+- Uncomment and adjust "-j2" flag on /etc/makepkg.conf for multithreading on package building.

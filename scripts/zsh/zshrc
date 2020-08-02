@@ -97,5 +97,3 @@ alias t..="t .."
 alias tt="t ~"
 alias v.="v ."
 alias z="fg"
-
-t

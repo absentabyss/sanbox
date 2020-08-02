@@ -47,7 +47,6 @@ flags = [
 '-Weffc++',
 '-Wextra',
 '-Wsign-conversion',
-'-std=c++11',
 # You 100% do NOT need -DUSE_CLANG_COMPLETER and/or -DYCM_EXPORT in your flags;
 # only the YCM source code needs it.
 '-DUSE_CLANG_COMPLETER',

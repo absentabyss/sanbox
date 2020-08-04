@@ -85,15 +85,14 @@ yard()
 
 # Aliases
 alias agus="ssh -p 22000 agusavior@agusavior.ddns.net"
-alias bots="ssh -p 22000 bots@agna.me"
 alias freemem="sudo echo 'Clearing swap...'&&sudo swapoff -a&&echo 'Reassigning swap...'&&sudo swapon -a&&echo 'Clearing cache...'&&sudo sync&&sudo sh -c '/usr/bin/echo 3 > /proc/sys/vm/drop_caches'&&echo 'Done.'"
-alias get+="yay -S"
-alias get="sudo pacman -S"
+alias get="yay -S"
 alias irssi="irssi -n absentabyss"
 alias ping="ping 8.8.8.8"
-alias purge="sudo pacman -Rsc"
+alias purge="yay -Rsc"
 alias q="cd ~ && v -c \"NERDTree | wincmd p\" \! && cd -"
 alias t..="t .."
 alias tt="t ~"
 alias v.="v ."
+alias web="ssh -p 22000 web@agna.me"
 alias z="fg"

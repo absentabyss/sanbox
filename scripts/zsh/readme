@@ -1,2 +1,10 @@
 This will install a basic configuration for zsh.
+
 Recommended theme: minimal
+Recommended plugins: git, vi-mode, sudo, colored-man-pages
+
+If unable to autocomplete systemd services:
+	# Systemctl fix
+	_systemctl_unit_state() {
+	  typeset -gA _sys_unit_state
+	  _sys_unit_state=( $(__systemctl list-unit-files "$PREFIX*" | awk '{print $1, $2}') ) }

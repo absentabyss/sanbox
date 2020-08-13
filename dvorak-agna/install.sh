@@ -9,6 +9,7 @@ dvorak_agna_install()
 dvorak_agna_set_as_default()
 {
 	cp vconsole.conf /etc
+	loadkeys dvorak-agna
 }
 
 echo "Do you wish to install the dvorak-agna keyboard layout? [y/N]"
@@ -18,7 +19,7 @@ if [ $reply == "y" ] || [ $reply == "Y" ]; then
 	dvorak_agna_install &&
 	echo "Success." &&
 
-	echo "Do you wish to set dvorak-agna as your default layout?" &&
+	echo "Do you wish to set dvorak-agna as your default layout? [y/N]" &&
 	read -rsn1 reply &&
 
 	if [ $reply == "y" ] || [ $reply == "Y" ]; then

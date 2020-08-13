@@ -3,8 +3,7 @@ cd ${0%/*}
 
 dvorak_agna_install()
 {
-	cp -r usr / &&
-	cp -r etc /
+	cp -r usr /
 }
 
 dvorak_agna_set_as_default()

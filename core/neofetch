@@ -9435,6 +9435,32 @@ ${c2}             `:smMM${c4}yy${c3}MMNy/`
 EOF
         ;;
 
+        "Sanbox"*)
+            set_colors 7 7
+            read -rd '' ascii_data <<'EOF'
+${c1}MXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXM
+N                                      N
+N                                      N
+N                           'OKl.      N
+N       ::::::::::::::::::::cccc:      N
+N                                      N
+N                                      N
+N                                      N
+N                          ,l.         N
+N          :::::::::::::::lkkk;        N
+N                                      N
+N                                      N
+N                                      N
+N                                      N
+N                              .lx,    N
+N    ;:::::::::::::::::::::::::dkkkl   N
+N                                      N
+N                                      N
+N                                      N
+MNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNM
+EOF
+        ;;
+
         "Scientific"*)
             set_colors 4 7 1
             read -rd '' ascii_data <<'EOF'

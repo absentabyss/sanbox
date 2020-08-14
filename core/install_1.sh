@@ -1,23 +1,28 @@
 #!/bin/sh
 cd ${0%/*}
 
-neofetch_install()
+sanbox_patch()
 {
-	cp neofetch /bin
+	sudo cp -r sanbox /etc &&
+	sudo cp -r /etc/sanbox/* /
 }
 
-yard_install()
+zsh_install()
 {
-	cp -r yard /etc
+	echo "Check /etc/zshrc for extra dependencies and install them separately." &&
+	sudo pacman -S pacman-contrib reflector zsh zsh-completions &&
+	sudo cp zshrc_preset /etc/zshrc &&
+	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
-echo "Would you like to continue Sanbox installation? (If you haven't, run install_1.sh first.)"
+echo "Would you like to install Sanbox? [y/N]"
 read -rsn1 reply
 
 if [ $reply == "y" ] || [ $reply == "Y" ]; then
-	neofetch_install &&
-	echo "Neofetch installed." &&
-	yard-install &&
-	echo "Yard installed."
-	echo "Success."
+	echo "Remember to run install_2.sh once you enter zsh."
+	read -rsn1 null
+
+	sanbox_patch &&
+	echo "Patched release files." &&
+	zsh_install
 fi

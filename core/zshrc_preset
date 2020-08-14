@@ -3,7 +3,7 @@
 # export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/web/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -166,14 +166,14 @@ update()
 {
 	if [[ "$@" == "" ]]; then
 		echo "If the download speed is too slow, try \"-a\" flag.\nYou can use \"-m\" to update mirrorlist or \"-r\" to purge orphans and outdated packages."
-		yay -Syu
+		pacaur -Syu
 		sanbox_patch
 		sudo paccache -r
 		sudo pacman -Rns $(pacman -Qtdq)
 	elif [[ "$@" == "-a" ]]; then
 		sudo echo ':: Synchronizing mirrorlist...'
 		sudo reflector --verbose --latest 50 --sort rate --save /etc/pacman.d/mirrorlist &&
-		yay -Syu
+		pacaur -Syu
 		sanbox_patch
 		sudo paccache -r
 		sudo pacman -Rns $(pacman -Qtdq)
@@ -237,9 +237,9 @@ yard()
 }
 
 # Aliases
-alias get="yay -S"
+alias get="pacaur -S"
 alias ping="ping 8.8.8.8"
-alias purge="yay -Rsc"
+alias purge="pacaur -Rsc"
 alias t..="t .."
 alias tt="t ~"
 alias v.="v ."

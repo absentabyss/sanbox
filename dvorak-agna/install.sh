@@ -3,13 +3,13 @@ cd ${0%/*}
 
 dvorak_agna_install()
 {
-	cp -r usr /
+	sudo cp -r usr /
 }
 
 dvorak_agna_set_as_default()
 {
-	cp vconsole.conf /etc
-	loadkeys dvorak-agna
+	sudo cp vconsole.conf /etc
+	sudo loadkeys dvorak-agna
 }
 
 echo "Do you wish to install the dvorak-agna keyboard layout? [y/N]"

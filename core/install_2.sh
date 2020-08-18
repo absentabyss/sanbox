@@ -17,7 +17,7 @@ read -rsn1 reply
 if [ $reply == "y" ] || [ $reply == "Y" ]; then
 	neofetch_install &&
 	echo "Neofetch installed." &&
-	yard-install &&
+	yard_install &&
 	echo "Yard installed."
 	echo "Success."
 fi

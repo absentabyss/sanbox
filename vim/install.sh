@@ -33,5 +33,5 @@ if [ $reply == "y" ] || [ $reply == "Y" ]; then
 		echo "Success."
 	fi
 
-	echo "You might need to run :PluginInstall as root. Check the installation documentation for each plugin in /etc/vimrc."
+	echo "You might need to run :PluginInstall as root. Check the installation documentation for each plugin on /etc/vimrc."
 fi

@@ -238,7 +238,6 @@ yard()
 
 # Aliases
 alias get="pacaur -S"
-alias ping="ping 8.8.8.8"
 alias purge="pacaur -Rsc"
 alias t..="t .."
 alias tt="t ~"

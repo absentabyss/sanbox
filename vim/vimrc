@@ -39,7 +39,6 @@ set rtp+=/etc/vim/bundle/Vundle.vim
 call vundle#begin('/etc/vim/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'DrawIt'
 Plugin 'godlygeek/tabular'
 Plugin 'pangloss/vim-javascript'
 Plugin 'raimondi/delimitmate'

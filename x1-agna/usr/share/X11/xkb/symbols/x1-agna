@@ -1,0 +1,70 @@
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "basic" {
+
+    name[Group1]= "X1 Agna";
+
+    include "level3(ralt_switch)"
+
+    key <TLDE> {[ VoidSymbol ]};
+    key <AE01> {[ VoidSymbol ]};
+    key <AE02> {[ Home ]};
+    key <AE03> {[ End ]};
+    key <AE04> {[ VoidSymbol ]};
+    key <AE05> {[ VoidSymbol ]};
+    key <AE06> {[ VoidSymbol ]};
+    key <AE07> {[ VoidSymbol ]};
+    key <AE08> {[ Page_Up ]};
+    key <AE09> {[ Page_Down ]};
+    key <AE10> {[ VoidSymbol ]};
+    key <AE11> {[ VoidSymbol ]};
+    key <AE12> {[ VoidSymbol ]};
+
+    key <TAB>  {[ dead_acute, dead_diaeresis, sterling ]};
+    key <AD01> {[ k, K, bracketleft ]};
+    key <AD02> {[ y, Y, dollar ]};
+    key <AD03> {[ o, O, colon ]};
+    key <AD04> {[ apostrophe, notsign, underscore ]};
+    key <AD05> {[ exclam, at, ampersand ]};
+    key <AD06> {[ f, F, 3, 3 ]};
+    key <AD07> {[ c, C, slash ]};
+    key <AD08> {[ l, L, 1, 1 ]};
+    key <AD09> {[ p, P, asterisk ]};
+    key <AD10> {[ q, Q, grave ]};
+    key <AD11> {[ z, Z, asciitilde ]};
+    key <AD12> {[ Delete ]};
+    key <BKSL> {[ Insert ]};
+
+    key <CAPS> {[ Tab, Tab, Escape, Escape ]};
+    key <AC01> {[ h, H, minus ]};
+    key <AC02> {[ i, I, parenleft ]};
+    key <AC03> {[ e, E, period ]};
+    key <AC04> {[ a, A, quotedbl ]};
+    key <AC05> {[ u, U, less ]};
+    key <AC06> {[ d, D, greater ]};
+    key <AC07> {[ s, S, equal ]};
+    key <AC08> {[ t, T, comma ]};
+    key <AC09> {[ n, N, semicolon ]};
+    key <AC10> {[ r, R, parenright ]};
+    key <AC11> {[ v, V, bracketright ]};
+    key <RTRN> {[ Return ]};
+
+    key <LFSH> {[ BackSpace ]};
+    key <AB01> {[ j, J, 8, 8 ]};
+    key <AB02> {[ question, bar, 4, 4 ]};
+    key <AB03> {[ 0, backslash, braceleft ]};
+    key <AB04> {[ 2, asciicircum, braceright ]};
+    key <AB05> {[ numbersign, copyright, 6, 6 ]};
+    key <AB06> {[ w, W, percent ]};
+    key <AB07> {[ g, G, plus ]};
+    key <AB08> {[ m, M, 5, 5 ]};
+    key <AB09> {[ b, B, 9, 9 ]};
+    key <AB10> {[ x, X, 7, 7 ]};
+    key <RTSH> {[ Caps_Lock ]};
+
+    key <LCTL> {[ Control_L ]};
+    key <LWIN> {[ Super_L ]};
+    key <LALT> {[ Alt_L ]};
+    key <SPCE> {[ space, space, Return ]};
+    key <RALT> {[ ISO_Level3_Shift ]};
+	key <RCTL> {[ Shift_R ]};
+};

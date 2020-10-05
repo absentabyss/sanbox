@@ -49,6 +49,7 @@ xkb_symbols "basic" {
     key <RTRN> {[ Return ]};
 
     key <LFSH> {[ BackSpace ]};
+    key <LSGT> {[ VoidSymbol ]};
     key <AB01> {[ j, J, 8, 8 ]};
     key <AB02> {[ question, bar, 4, 4 ]};
     key <AB03> {[ 0, backslash, braceleft ]};
@@ -66,5 +67,6 @@ xkb_symbols "basic" {
     key <LALT> {[ Alt_L ]};
     key <SPCE> {[ space, space, Return ]};
     key <RALT> {[ ISO_Level3_Shift ]};
+	key <RWIN> {[ Shift_L ]};
 	key <RCTL> {[ Shift_R ]};
 };

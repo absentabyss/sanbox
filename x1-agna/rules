@@ -1,0 +1,17 @@
+# This entries need to be added at the relevant sections of the rule files so that Fcitx may recognize the layout.
+# On /usr/share/X11/xkb/rules/
+# Add these entries to base.xml and evdev.xml
+    <layout>
+      <configItem>
+        <name>x1-agna</name>
+        <shortDescription>x1-agna</shortDescription>
+        <description>X1 Agna</description>
+        <languageList>
+          <iso639Id>eng</iso639Id>
+        </languageList>
+      </configItem>
+	  <variantList/>
+    </layout>
+
+# Add these entries to base.lst and evdev.lst
+  x1-agna         X1 Agna

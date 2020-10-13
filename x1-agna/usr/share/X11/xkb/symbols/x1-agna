@@ -18,6 +18,7 @@ xkb_symbols "basic" {
     key <AE10> {[ VoidSymbol ]};
     key <AE11> {[ VoidSymbol ]};
     key <AE12> {[ VoidSymbol ]};
+    key <BKSP> {[ VoidSymbol ]};
 
     key <TAB>  {[ dead_acute, dead_diaeresis, sterling ]};
     key <AD01> {[ k, K, bracketleft ]};
@@ -67,7 +68,7 @@ xkb_symbols "basic" {
     key <LALT> {[ Alt_L ]};
     key <SPCE> {[ space, space, Return ]};
     key <RALT> {[ ISO_Level3_Shift ]};
-	key <RWIN> {[ Shift_L ]};
-	key <MENU> {[ Shift_L ]};
+	key <RWIN> {[ Shift_R ]};
+	key <MENU> {[ Shift_R ]};
 	key <RCTL> {[ Shift_R ]};
 };

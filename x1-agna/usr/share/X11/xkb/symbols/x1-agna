@@ -68,7 +68,7 @@ xkb_symbols "basic" {
     key <LALT> {[ Alt_L ]};
     key <SPCE> {[ space, space, Return ]};
     key <RALT> {[ ISO_Level3_Shift ]};
-	key <RWIN> {[ Shift_L ]};
-	key <MENU> {[ Shift_L ]};
-	key <RCTL> {[ Shift_R ]};
+    key <RWIN> {[ Shift_L ]};
+    key <MENU> {[ Shift_L ]};
+    key <RCTL> {[ Shift_R ]};
 };

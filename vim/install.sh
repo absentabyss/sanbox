@@ -5,7 +5,8 @@ gvim_install()
 {
 	sudo pacman -S gvim &&
 	sudo ln -s /bin/vim /bin/v &&
-	sudo git clone https://github.com/VundleVim/Vundle.vim.git /etc/vim/bundle/Vundle.vim
+	sudo cp vv /bin &&
+	sudo git clone https://github.com/VundleVim/Vundle.vim.git /etc/vim/bundle/Vundle.vim &&
 	sudo cp vimrc /etc
 }
 
@@ -13,7 +14,8 @@ vim_install()
 {
 	sudo pacman -S vim &&
 	sudo ln -s /bin/vim /bin/v &&
-	sudo git clone https://github.com/VundleVim/Vundle.vim.git /etc/vim/bundle/Vundle.vim
+	sudo cp vv /bin &&
+	sudo git clone https://github.com/VundleVim/Vundle.vim.git /etc/vim/bundle/Vundle.vim &&
 	sudo cp vimrc /etc
 }
 

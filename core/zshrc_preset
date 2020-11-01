@@ -204,18 +204,18 @@ yard()
 
 		if [[ "$1" == "cpp" ]]; then
 			env.cpp &&
-			v main.cpp &&
+			vv main.cpp &&
 
 		elif [[ "$1" == "c" ]]; then
 			env.c &&
-			v main.c &&
+			vv main.c &&
 
 		elif [[ "$1" == "js" ]]; then
 			env.js &&
-			v script.js &&
+			vv script.js &&
 
 		else
-			v yard."$1" &&
+			vv yard."$1" &&
 		fi
 
 		cd - &&
@@ -227,27 +227,29 @@ yard()
 
 		if [[ "$1" == "cpp" ]]; then
 			env.cpp &&
-			v main.cpp
+			vv main.cpp
 
 		elif [[ "$1" == "c" ]]; then
 			env.c &&
-			v main.c
+			vv main.c
 
 		elif [[ "$1" == "js" ]]; then
 			env.js &&
-			v script.js
+			vv script.js
 
 		else
-			v "$2"."$1"
+			vv "$2"."$1"
 		fi
 	fi
 }
 
 # Aliases
 alias get="pacaur -S"
+alias i3conf="v ~/.config/i3/config"
 alias purge="pacaur -Rsc"
-alias t..="t .."
 alias tt="t ~"
-alias v.="v ."
+alias vconf="sudo v /etc/vimrc"
+alias wm="sudo wifi-menu"
 alias x="tmux attach -t 0 || tmux"
 alias z="fg"
+alias zconf="v ~/.zshrc"

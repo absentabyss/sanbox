@@ -16,19 +16,17 @@ runtime! archlinux.vim
 
 " do not load defaults if ~/.vimrc is missing
 "let skip_defaults_vim=1
-let g:netrw_banner=0
-let g:netrw_bufsettings='noma nomod nu nobl nowrapp ro'
-let g:netrw_list_hide='^\.[^.]\+'
 let g:ycm_confirm_extra_conf=0
 let g:python3_host_prog='/usr/bin/python'
-set mouse=a
+set formatoptions+=a
+set ignorecase
 set laststatus=2
+set mouse=a
 set noequalalways
 set number
-set tabstop=4
 set shiftwidth=4
-set ignorecase
 set smartcase
+set tabstop=4
 
 packadd termdebug
 
@@ -40,6 +38,7 @@ call vundle#begin('/etc/vim/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
+Plugin 'mbbill/undotree'
 Plugin 'pangloss/vim-javascript'
 Plugin 'raimondi/delimitmate'
 Plugin 'scrooloose/nerdtree'
@@ -54,11 +53,18 @@ syntax on
 let NERDTreeShowLineNumbers=1
 
 " Bindings
-nnoremap ,n :NERDTree<CR>
+nnoremap ,n :cd %:p:h<CR>:NERDTree<CR>
+nnoremap ,u :UndotreeToggle<CR>
+nnoremap ZV :qa!<CR>
+
+nnoremap ,w :new<CR>
+nnoremap ,vw :vert new<CR>
+
 nnoremap ,t :let $VIM_DIR=expand("%:p:h")<CR>:term<CR>clear&&cd $VIM_DIR<CR>
-nnoremap ;t :let $VIM_DIR=expand("%:p:h")<CR>:vert term<CR>clear&&cd $VIM_DIR<CR>
-nnoremap ,dc :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
-nnoremap ;dc :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:vert term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
-nnoremap ,dp :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>
-nnoremap ;dp :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:vert term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>
-nnoremap ,h :cd %:p:h<CR>
+nnoremap ,vt :let $VIM_DIR=expand("%:p:h")<CR>:vert term<CR>clear&&cd $VIM_DIR<CR>
+
+nnoremap ,c :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
+nnoremap ,vc :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:vert term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
+
+nnoremap ,p :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>
+nnoremap ,vp :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:vert term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>

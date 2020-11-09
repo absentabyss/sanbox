@@ -18,7 +18,6 @@ runtime! archlinux.vim
 "let skip_defaults_vim=1
 let g:ycm_confirm_extra_conf=0
 let g:python3_host_prog='/usr/bin/python'
-set formatoptions+=a
 set ignorecase
 set laststatus=2
 set mouse=a
@@ -27,6 +26,7 @@ set number
 set shiftwidth=4
 set smartcase
 set tabstop=4
+set tw=80
 
 packadd termdebug
 
@@ -37,6 +37,7 @@ set rtp+=/etc/vim/bundle/Vundle.vim
 call vundle#begin('/etc/vim/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'activitywatch/aw-watcher-vim'
 Plugin 'godlygeek/tabular'
 Plugin 'mbbill/undotree'
 Plugin 'pangloss/vim-javascript'
@@ -53,18 +54,20 @@ syntax on
 let NERDTreeShowLineNumbers=1
 
 " Bindings
-nnoremap ,n :cd %:p:h<CR>:NERDTree<CR>
+nnoremap ,n :cd %:p:h<CR>:NERDTreeToggle<CR>
 nnoremap ,u :UndotreeToggle<CR>
 nnoremap ZV :qa!<CR>
 
 nnoremap ,w :new<CR>
 nnoremap ,vw :vert new<CR>
+nnoremap ,s :split 
+nnoremap ,vs :vert split 
 
 nnoremap ,t :let $VIM_DIR=expand("%:p:h")<CR>:term<CR>clear&&cd $VIM_DIR<CR>
 nnoremap ,vt :let $VIM_DIR=expand("%:p:h")<CR>:vert term<CR>clear&&cd $VIM_DIR<CR>
 
-nnoremap ,c :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
-nnoremap ,vc :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:vert term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
+nnoremap ,c :let $VIM_DIR=expand("%:p:h")<CR>:term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
+nnoremap ,vc :let $VIM_DIR=expand("%:p:h")<CR>:vert term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
 
-nnoremap ,p :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>
-nnoremap ,vp :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%")<CR>:vert term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>
+nnoremap ,p :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>
+nnoremap ,vp :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:vert term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>

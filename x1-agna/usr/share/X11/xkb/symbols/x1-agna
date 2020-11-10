@@ -20,7 +20,7 @@ xkb_symbols "basic" {
     key <AE12> {[ VoidSymbol ]};
     key <BKSP> {[ VoidSymbol ]};
 
-    key <TAB>  {[ dead_acute, dead_diaeresis, sterling ]};
+    key <TAB>  {[ dead_acute, sterling,	dead_diaeresis ]};
     key <AD01> {[ k, K, bracketleft ]};
     key <AD02> {[ y, Y, dollar ]};
     key <AD03> {[ o, O, colon ]};

@@ -1,4 +1,4 @@
 - If using AUR, uncomment and adjust "-j2" flag on /etc/makepkg.conf for multithreading on package building.
 - If using i3 and Spotify, fix the volume change delay with: https://community.spotify.com/t5/Desktop-Linux/Delay-when-changing-volume/td-p/1589346#:~:text=Steps%20to%20reproduce%20the%20issue,delay%20of%20around%20a%20second.
-- For easy access to ñ and ç on Xorg with X1, modify the locale compose. (/usr/share/X11/locale/<encoding>/Compose)
+- For easy access to ñ, ¡ and ¿ on Xorg with X1, modify the locale compose. (/usr/share/X11/locale/<encoding>/Compose)
 - Note that some aliases and commands in Zshrc require v and vv to be text editors. v is installed by default as a symlink to vim. vv is just a script that runs Vim with NERDTree.

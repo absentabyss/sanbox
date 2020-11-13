@@ -20,7 +20,7 @@ xkb_symbols "basic" {
     key <AE12> {[ VoidSymbol ]};
     key <BKSP> {[ VoidSymbol ]};
 
-    key <TAB>  {[ dead_acute, sterling,	dead_diaeresis ]};
+    key <TAB>  {[ Tab ]};
     key <AD01> {[ k, K, bracketleft ]};
     key <AD02> {[ y, Y, dollar ]};
     key <AD03> {[ o, O, colon ]};
@@ -35,7 +35,7 @@ xkb_symbols "basic" {
     key <AD12> {[ Delete ]};
     key <BKSL> {[ Insert ]};
 
-    key <CAPS> {[ Tab, Tab, Escape, Escape ]};
+    key <CAPS> {[ dead_acute, sterling,	dead_diaeresis ]};
     key <AC01> {[ h, H, minus ]};
     key <AC02> {[ i, I, parenleft ]};
     key <AC03> {[ e, E, period ]};
@@ -49,7 +49,7 @@ xkb_symbols "basic" {
     key <AC11> {[ v, V, bracketright ]};
     key <RTRN> {[ Return ]};
 
-    key <LFSH> {[ BackSpace ]};
+    key <LFSH> {[ BackSpace, BackSpace, Escape ]};
     key <LSGT> {[ VoidSymbol ]};
     key <AB01> {[ j, J, 8, 8 ]};
     key <AB02> {[ question, bar, 4, 4 ]};

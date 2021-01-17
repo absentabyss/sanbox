@@ -1,0 +1,10 @@
+patch="# Custom\n\
+<dead_acute> <N> : \"Ñ\"\n\
+<dead_acute> <n> : \"ñ\"\n\
+<dead_acute> <exclam> : \"¡\"\n\
+<dead_acute> <question> : \"¿\"\
+"
+
+file="/usr/share/X11/locale/en_US.UTF-8/Compose"
+
+echo -e $patch >> $file

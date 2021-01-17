@@ -4,6 +4,7 @@ cd ${0%/*}
 x1_agna_install()
 {
 	sudo cp -r usr /
+	sudo cp x1_spanish_patch /bin
 }
 
 x1_agna_set_as_default()

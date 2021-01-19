@@ -37,7 +37,6 @@ set rtp+=/etc/vim/bundle/Vundle.vim
 call vundle#begin('/etc/vim/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'activitywatch/aw-watcher-vim'
 Plugin 'godlygeek/tabular'
 Plugin 'mbbill/undotree'
 Plugin 'pangloss/vim-javascript'
@@ -66,8 +65,8 @@ nnoremap ,vs :vert split
 nnoremap ,t :let $VIM_DIR=expand("%:p:h")<CR>:term<CR>clear&&cd $VIM_DIR<CR>
 nnoremap ,vt :let $VIM_DIR=expand("%:p:h")<CR>:vert term<CR>clear&&cd $VIM_DIR<CR>
 
-nnoremap ,c :let $VIM_DIR=expand("%:p:h")<CR>:term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
-nnoremap ,vc :let $VIM_DIR=expand("%:p:h")<CR>:vert term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
+nnoremap ,c :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
+nnoremap ,vc :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:vert term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
 
-nnoremap ,p :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>
-nnoremap ,vp :let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:vert term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>
+nnoremap ,p :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>
+nnoremap ,vp :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:vert term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>

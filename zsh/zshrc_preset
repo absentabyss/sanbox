@@ -1,9 +1,10 @@
+HOME_DIR=""
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/user/.oh-my-zsh"
+export ZSH="$HOME_DIR/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,143 +106,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # User defined functions
-env.c()
-{
-	cp -n /etc/yard/c/*(DN) .
-}
+EXTENSIONS_DIR="$HOME_DIR/.zsh_extensions"
 
-env.cpp()
-{
-	cp -n /etc/yard/cpp/*(DN) .
-}
-
-env.js()
-{
-	cp -n /etc/yard/js/*(DN) .
-}
-
-freemem()
-{
-	sudo echo 'Clearing swap...'
-	sudo swapoff -a
-	echo 'Reassigning swap...'
-	sudo swapon -a
-	echo 'Clearing cache...'
-	sudo sync
-	sudo sh -c '/usr/bin/echo 3 > /proc/sys/vm/drop_caches'
-	echo 'Done.'
-}
-
-f()
-{
-	$@ &> /dev/null & disown
-}
-compdef f=exec
-
-fe()
-{
-	$@ &> /dev/null & disown && exit
-}
-compdef fe=exec
-
-mnt()
-{
-	sudo mount $@ /mnt && cd /mnt
-}
-
-sanbox_patch()
-{
-	sudo cp -r /etc/sanbox/* /
-}
-
-t()
-{
-	if [[ "$@" = "" ]]; then
-		ls
-	else
-		cd "$@" &&
-		ls
-	fi
-}
-
-umnt()
-{
-	sudo umount -R /mnt
-}
-
-update()
-{
-	if [[ "$@" == "" ]]; then
-		echo "If the download speed is too slow, try \"-a\" flag.\nYou can use \"-m\" to update mirrorlist or \"-r\" to purge orphans and outdated packages."
-		pacaur -Syu
-		sanbox_patch
-		sudo paccache -r
-		sudo pacman -Rns $(pacman -Qtdq)
-	elif [[ "$@" == "-a" ]]; then
-		sudo echo ':: Synchronizing mirrorlist...'
-		sudo reflector --verbose --latest 50 --sort rate --save /etc/pacman.d/mirrorlist &&
-		pacaur -Syu
-		sanbox_patch
-		sudo paccache -r
-		sudo pacman -Rns $(pacman -Qtdq)
-	elif [[ "$@" == "-m" ]]; then
-		sudo echo ':: Synchronizing mirrorlist...'
-		sudo reflector --verbose --latest 50 --sort rate --save /etc/pacman.d/mirrorlist &&
-		echo "Done."
-	elif [[ "$@" == "-r" ]]; then
-		sudo paccache -r
-		sudo pacman -Rns $(pacman -Qtdq)
-	else
-		echo "Error: Unknown flag.\nAvailable flags:\n\t-a\tComplete update.\n\t-m\tUpdate mirrorlist.\n\t-r\tPurge orphan and outdated packages."
-	fi
-}
-
-yard()
-{
-	if [[ "$2" == "" ]]; then
-		mkdir tmp &&
-		cd tmp &&
-
-		if [[ "$1" == "cpp" ]]; then
-			env.cpp &&
-			vv main.cpp &&
-
-		elif [[ "$1" == "c" ]]; then
-			env.c &&
-			vv main.c &&
-
-		elif [[ "$1" == "js" ]]; then
-			env.js &&
-			vv script.js &&
-
-		else
-			vv yard."$1" &&
-		fi
-
-		cd - &&
-		rm -r tmp
-
-	else
-		mkdir "$2" &&
-		cd "$2" &&
-
-		if [[ "$1" == "cpp" ]]; then
-			env.cpp &&
-			vv main.cpp
-
-		elif [[ "$1" == "c" ]]; then
-			env.c &&
-			vv main.c
-
-		elif [[ "$1" == "js" ]]; then
-			env.js &&
-			vv script.js
-
-		else
-			vv "$2"."$1"
-		fi
-	fi
-}
+source $EXTENSIONS_DIR/fork.sh
+source $EXTENSIONS_DIR/freemem.sh
+source $EXTENSIONS_DIR/mount.sh
+source $EXTENSIONS_DIR/t.sh
+source $EXTENSIONS_DIR/update.sh
+source $EXTENSIONS_DIR/yard.sh
 
 # Aliases
 alias get="pacaur -S"

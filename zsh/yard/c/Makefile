@@ -9,7 +9,7 @@ FILENAME = main
 out: $(OBJ)
 	$(CC) -o $(FILENAME) $^
 
-%.o: %.cpp
+%.o: %.c
 	$(CC) -g $(CFLAGS) $^
 
 release:

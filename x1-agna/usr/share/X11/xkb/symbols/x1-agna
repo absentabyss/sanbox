@@ -10,7 +10,7 @@ xkb_symbols "basic" {
     key <AE02> {[ Home ]};
     key <AE03> {[ End ]};
     key <AE04> {[ VoidSymbol ]};
-    key <AE05> {[ VoidSymbol ]};
+    key <AE05> {[ Escape ]};
     key <AE06> {[ VoidSymbol ]};
     key <AE07> {[ VoidSymbol ]};
     key <AE08> {[ Page_Up ]};
@@ -20,7 +20,7 @@ xkb_symbols "basic" {
     key <AE12> {[ VoidSymbol ]};
     key <BKSP> {[ VoidSymbol ]};
 
-    key <TAB>  {[ Tab, Tab, Escape ]};
+    key <TAB>  {[ Tab ]};
     key <AD01> {[ k, K, bracketleft ]};
     key <AD02> {[ y, Y, dollar ]};
     key <AD03> {[ o, O, colon ]};

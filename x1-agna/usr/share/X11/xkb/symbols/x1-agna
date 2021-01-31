@@ -20,7 +20,7 @@ xkb_symbols "basic" {
     key <AE12> {[ VoidSymbol ]};
     key <BKSP> {[ VoidSymbol ]};
 
-    key <TAB>  {[ Tab ]};
+    key <TAB>  {[ Tab, Tab, Escape ]};
     key <AD01> {[ k, K, bracketleft ]};
     key <AD02> {[ y, Y, dollar ]};
     key <AD03> {[ o, O, colon ]};
@@ -49,7 +49,7 @@ xkb_symbols "basic" {
     key <AC11> {[ v, V, bracketright ]};
     key <RTRN> {[ Return ]};
 
-    key <LFSH> {[ BackSpace, BackSpace, Escape ]};
+    key <LFSH> {[ BackSpace ]};
     key <LSGT> {[ VoidSymbol ]};
     key <AB01> {[ j, J, 8, 8 ]};
     key <AB02> {[ question, bar, 4, 4 ]};

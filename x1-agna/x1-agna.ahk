@@ -63,7 +63,7 @@ F7::Suspend
 +t::@
 
 +x::|
-+c::\
++c::Send \
 +v::^
 +b::Send {U+00A9}
 

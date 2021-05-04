@@ -6,11 +6,11 @@ xkb_symbols "basic" {
     include "level3(ralt_switch)"
 
     key <TLDE> {[ VoidSymbol ]};
-    key <AE01> {[ VoidSymbol ]};
+    key <AE01> {[ Escape ]};
     key <AE02> {[ Page_Up ]};
     key <AE03> {[ Page_Down ]};
     key <AE04> {[ VoidSymbol ]};
-    key <AE05> {[ Escape ]};
+    key <AE05> {[ VoidSymbol ]};
     key <AE06> {[ VoidSymbol ]};
     key <AE07> {[ VoidSymbol ]};
     key <AE08> {[ Home ]};

@@ -7,14 +7,14 @@ xkb_symbols "basic" {
 
     key <TLDE> {[ VoidSymbol ]};
     key <AE01> {[ VoidSymbol ]};
-    key <AE02> {[ Home ]};
-    key <AE03> {[ End ]};
+    key <AE02> {[ Page_Up ]};
+    key <AE03> {[ Page_Down ]};
     key <AE04> {[ VoidSymbol ]};
     key <AE05> {[ Escape ]};
     key <AE06> {[ VoidSymbol ]};
     key <AE07> {[ VoidSymbol ]};
-    key <AE08> {[ Page_Up ]};
-    key <AE09> {[ Page_Down ]};
+    key <AE08> {[ Home ]};
+    key <AE09> {[ End ]};
     key <AE10> {[ VoidSymbol ]};
     key <AE11> {[ VoidSymbol ]};
     key <AE12> {[ VoidSymbol ]};

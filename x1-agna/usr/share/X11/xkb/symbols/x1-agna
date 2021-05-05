@@ -13,9 +13,9 @@ xkb_symbols "basic" {
     key <AE05> {[ VoidSymbol ]};
     key <AE06> {[ VoidSymbol ]};
     key <AE07> {[ VoidSymbol ]};
-    key <AE08> {[ VoidSymbol ]};
-    key <AE09> {[ Home ]};
-    key <AE10> {[ End ]};
+    key <AE08> {[ Home ]};
+    key <AE09> {[ End ]};
+    key <AE10> {[ VoidSymbol ]};
     key <AE11> {[ VoidSymbol ]};
     key <AE12> {[ VoidSymbol ]};
     key <BKSP> {[ VoidSymbol ]};

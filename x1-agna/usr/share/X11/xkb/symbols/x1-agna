@@ -61,14 +61,12 @@ xkb_symbols "basic" {
     key <AB08> {[ m, M, 5, 5 ]};
     key <AB09> {[ b, B, 9, 9 ]};
     key <AB10> {[ x, X, 7, 7 ]};
-    key <RTSH> {[ Caps_Lock ]};
+    key <RTSH> {[ Alt_L ]};
 
     key <LCTL> {[ Control_L ]};
     key <LWIN> {[ Super_L ]};
-    key <LALT> {[ Alt_L ]};
+    key <LALT> {[ Shift_L, Shift_L, Shift_L ]};
     key <SPCE> {[ space, space, Return ]};
     key <RALT> {[ ISO_Level3_Shift ]};
-    key <RWIN> {[ Shift_L ]};
-    key <MENU> {[ Shift_L ]};
-    key <RCTL> {[ Shift_R ]};
+    key <RCTL> {[ Caps_Lock ]};
 };

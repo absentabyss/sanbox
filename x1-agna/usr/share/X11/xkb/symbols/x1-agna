@@ -16,7 +16,7 @@ xkb_symbols "basic" {
     key <AE08> {[ Home ]};
     key <AE09> {[ End ]};
     key <AE10> {[ VoidSymbol ]};
-    key <AE11> {[ VoidSymbol ]};
+    key <AE11> {[ Caps_Lock ]};
     key <AE12> {[ VoidSymbol ]};
     key <BKSP> {[ VoidSymbol ]};
 
@@ -68,5 +68,5 @@ xkb_symbols "basic" {
     key <LALT> {[ Shift_L, Shift_L, Shift_L ]};
     key <SPCE> {[ space, space, Return ]};
     key <RALT> {[ ISO_Level3_Shift ]};
-    key <RCTL> {[ Caps_Lock ]};
+    key <RCTL> {[ VoidSymbol ]};
 };

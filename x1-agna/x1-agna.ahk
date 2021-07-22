@@ -2,17 +2,17 @@ F7::Suspend
 
 ; First layer.
 *`::Return
-*1::Return
-*2::Home
-*3::End
+*1::Esc
+*2::PgUp
+*3::PgDn
 *4::Return
-*5::Esc
+*5::Return
 *6::Return
-*7::PgUp
-*8::PgDn
-*9::Return
+*7::Return
+*8::Home
+*9::End
 *0::Return
-*-::Return
+*-::CapsLock
 *=::Return
 *Backspace::Return
 
@@ -30,7 +30,7 @@ F7::Suspend
 *]::Del
 *\::Return
 
-*Capslock::Return
+*Capslock::Send {U+00A3}
 *a::h
 *s::i
 *d::e
@@ -54,9 +54,11 @@ F7::Suspend
 *,::m
 *.::b
 */::x
-*RShift::CapsLock
+*RShift::LAlt
 
-*RCtrl::Shift
+*LAlt::Shift
+*RWin::Return
+*RCtrl::Return
 
 ; Second layer.
 +r::Send {U+00AC}
@@ -104,3 +106,6 @@ RAlt & .::Send 9
 RAlt & /::Send 7
 
 RAlt & Space::Send {Enter}
+
+; Custom bindings.
+LWin & Esc::!F4

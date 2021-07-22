@@ -109,3 +109,9 @@ RAlt & Space::Send {Enter}
 
 ; Custom bindings.
 LWin & Esc::!F4
+LWin & F1::Send {Volume_Mute}
+LWin & F2::Send {Volume_Down}
+LWin & F3::Send {Volume_Up}
+LWin & F4::Send {Media_Prev}
+LWin & F5::Send {Media_Play_Pause}
+LWin & F6::Send {Media_Next}

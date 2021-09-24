@@ -16,8 +16,9 @@ runtime! archlinux.vim
 
 " do not load defaults if ~/.vimrc is missing
 "let skip_defaults_vim=1
-let g:ycm_confirm_extra_conf=0
 let g:python3_host_prog='/usr/bin/python'
+let g:ycm_confirm_extra_conf=0
+set expandtab
 set ignorecase
 set laststatus=2
 set mouse=a
@@ -37,14 +38,19 @@ set rtp+=/etc/vim/bundle/Vundle.vim
 call vundle#begin('/etc/vim/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'godlygeek/tabular'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'mbbill/undotree'
 Plugin 'pangloss/vim-javascript'
+Plugin 'prettier/vim-prettier'
 Plugin 'raimondi/delimitmate'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'unblevable/quick-scope'
 Plugin 'valloric/youcompleteme'
+Plugin 'vimwiki/vimwiki'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -53,20 +59,31 @@ syntax on
 let NERDTreeShowLineNumbers=1
 
 " Bindings
-nnoremap ,n :cd %:p:h<CR>:NERDTreeToggle<CR>
-nnoremap ,u :UndotreeToggle<CR>
+nnoremap ,m :res 1000<CR>:vert res 1000<CR>
+nnoremap ,s :split<CR>
+nnoremap ,t :let $VIM_DIR=expand("%:p:h")<CR>:term<CR>clear&&cd $VIM_DIR<CR>
+nnoremap ,vs :vert split<CR>
+nnoremap ,vt :let $VIM_DIR=expand("%:p:h")<CR>:vert term<CR>clear&&cd $VIM_DIR<CR>
+nnoremap ,vw :vert new<CR>
+nnoremap ,w :new<CR>
 nnoremap ZV :qa!<CR>
 
-nnoremap ,w :new<CR>
-nnoremap ,vw :vert new<CR>
-nnoremap ,s :split 
-nnoremap ,vs :vert split 
+" NerdTree bindings
+nnoremap ,n :cd %:p:h<CR>:NERDTreeToggle %<CR>
+nnoremap ,u :UndotreeToggle<CR>
 
-nnoremap ,t :let $VIM_DIR=expand("%:p:h")<CR>:term<CR>clear&&cd $VIM_DIR<CR>
-nnoremap ,vt :let $VIM_DIR=expand("%:p:h")<CR>:vert term<CR>clear&&cd $VIM_DIR<CR>
+" EasyMotion bindings
+map <Leader> <Plug>(easymotion-prefix)
 
+" Run languages
 nnoremap ,c :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
 nnoremap ,vc :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:vert term<CR>clear&&cd $VIM_DIR&&make&&./main<CR>
 
 nnoremap ,p :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>
 nnoremap ,vp :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:vert term<CR>clear&&cd $VIM_DIR&&python $VIM_FILE<CR>
+
+nnoremap ,j :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:term<CR>clear&&cd $VIM_DIR&&node $VIM_FILE<CR>
+nnoremap ,vj :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:vert term<CR>clear&&cd $VIM_DIR&&node $VIM_FILE<CR>
+
+nnoremap ,a :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:term<CR>clear&&cd $VIM_DIR&&nasm -felf64 $VIM_FILE&&ld *.o&&./a.out<CR>
+nnoremap ,va :w<CR>:let $VIM_DIR=expand("%:p:h")<CR>:let $VIM_FILE=expand("%:p")<CR>:vert term<CR>clear&&cd $VIM_DIR&&nasm -felf64 $VIM_FILE&&ld *.o&&./a.out<CR>

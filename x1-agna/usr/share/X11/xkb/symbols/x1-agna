@@ -10,7 +10,7 @@ xkb_symbols "basic" {
     key <AE02> {[ Page_Up ]};
     key <AE03> {[ Page_Down ]};
     key <AE04> {[ VoidSymbol ]};
-    key <AE05> {[ VoidSymbol ]};
+    key <AE05> {[ Kanji ]};
     key <AE06> {[ VoidSymbol ]};
     key <AE07> {[ VoidSymbol ]};
     key <AE08> {[ Home ]};

@@ -13,11 +13,11 @@ xkb_symbols "basic" {
     key <AE05> {[ Kanji ]};
     key <AE06> {[ VoidSymbol ]};
     key <AE07> {[ VoidSymbol ]};
-    key <AE08> {[ Home ]};
-    key <AE09> {[ End ]};
-    key <AE10> {[ VoidSymbol ]};
-    key <AE11> {[ Caps_Lock ]};
-    key <AE12> {[ VoidSymbol ]};
+    key <AE08> {[ VoidSymbol ]};
+    key <AE09> {[ Home ]};
+    key <AE10> {[ End ]};
+    key <AE11> {[ VoidSymbol ]};
+    key <AE12> {[ Caps_Lock ]};
     key <BKSP> {[ VoidSymbol ]};
 
     key <TAB>  {[ Tab ]};
@@ -26,14 +26,14 @@ xkb_symbols "basic" {
     key <AD03> {[ o, O, colon ]};
     key <AD04> {[ apostrophe, notsign, underscore ]};
     key <AD05> {[ exclam, at, ampersand ]};
-    key <AD06> {[ f, F, 3, 3 ]};
-    key <AD07> {[ c, C, slash ]};
-    key <AD08> {[ l, L, 1, 1 ]};
-    key <AD09> {[ p, P, asterisk ]};
-    key <AD10> {[ q, Q, grave ]};
-    key <AD11> {[ z, Z, asciitilde ]};
-    key <AD12> {[ Delete ]};
-    key <BKSL> {[ Insert ]};
+    key <AD06> {[ Insert ]};
+    key <AD07> {[ f, F, 3, 3 ]};
+    key <AD08> {[ c, C, slash ]};
+    key <AD09> {[ l, L, 1, 1 ]};
+    key <AD10> {[ p, P, asterisk ]};
+    key <AD11> {[ q, Q, grave ]};
+    key <AD12> {[ z, Z, asciitilde ]};
+    key <BKSL> {[ Delete ]};
 
     key <CAPS> {[ dead_acute, sterling,	dead_diaeresis ]};
     key <AC01> {[ h, H, minus ]};
@@ -41,13 +41,13 @@ xkb_symbols "basic" {
     key <AC03> {[ e, E, period ]};
     key <AC04> {[ a, A, quotedbl ]};
     key <AC05> {[ u, U, less ]};
-    key <AC06> {[ d, D, greater ]};
-    key <AC07> {[ s, S, equal ]};
-    key <AC08> {[ t, T, comma ]};
-    key <AC09> {[ n, N, semicolon ]};
-    key <AC10> {[ r, R, parenright ]};
-    key <AC11> {[ v, V, bracketright ]};
-    key <RTRN> {[ Return ]};
+    key <AC06> {[ Return ]};
+    key <AC07> {[ d, D, greater ]};
+    key <AC08> {[ s, S, equal ]};
+    key <AC09> {[ t, T, comma ]};
+    key <AC10> {[ n, N, semicolon ]};
+    key <AC11> {[ r, R, parenright ]};
+    key <RTRN> {[ v, V, bracketright ]};
 
     key <LFSH> {[ BackSpace ]};
     key <LSGT> {[ VoidSymbol ]};
@@ -56,12 +56,12 @@ xkb_symbols "basic" {
     key <AB03> {[ 0, backslash, braceleft ]};
     key <AB04> {[ 2, asciicircum, braceright ]};
     key <AB05> {[ numbersign, copyright, 6, 6 ]};
-    key <AB06> {[ w, W, percent ]};
-    key <AB07> {[ g, G, plus ]};
-    key <AB08> {[ m, M, 5, 5 ]};
-    key <AB09> {[ b, B, 9, 9 ]};
-    key <AB10> {[ x, X, 7, 7 ]};
-    key <RTSH> {[ Alt_L ]};
+    key <AB06> {[ Alt_L ]};
+    key <AB07> {[ w, W, percent ]};
+    key <AB08> {[ g, G, plus ]};
+    key <AB09> {[ m, M, 5, 5 ]};
+    key <AB10> {[ b, B, 9, 9 ]};
+    key <RTSH> {[ x, X, 7, 7 ]};
 
     key <LCTL> {[ Control_L ]};
     key <LWIN> {[ Super_L ]};

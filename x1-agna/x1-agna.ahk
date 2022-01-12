@@ -1,3 +1,8 @@
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
 F7::Suspend
 
 ; First layer.
@@ -9,11 +14,11 @@ F7::Suspend
 *5::Return
 *6::Return
 *7::Return
-*8::Home
-*9::End
-*0::Return
-*-::CapsLock
-*=::Return
+*8::Return
+*9::Home
+*0::End
+*-::Return
+*=::CapsLock
 *Backspace::Return
 
 *q::k
@@ -21,14 +26,14 @@ F7::Suspend
 *e::o
 *r::'
 *t::!
-*y::f
-*u::c
-*i::l
-*o::p
-*p::q
-*[::z
-*]::Del
-*\::Return
+*y::Return
+*u::f
+*i::c
+*o::l
+*p::p
+*[::q
+*]::z
+*\::Del
 
 *Capslock::Send {U+00A3}
 *a::h
@@ -36,27 +41,27 @@ F7::Suspend
 *d::e
 *f::a
 *g::u
-*h::d
-*j::s
-*k::t
-*l::n
-*;::r
-*'::v
+*h::Enter
+*j::d
+*k::s
+*l::t
+*;::n
+*'::r
+*Enter::v
 
-*LShift::Backspace
+*RShift::Backspace
 *z::j
 *x::?
 *c::0
 *v::2
 *b::#
-*n::w
-*m::g
-*,::m
-*.::b
-*/::x
-*RShift::LAlt
+*n::LAlt
+*m::w
+*,::g
+*.::m
+*/::b
+*LAlt::x
 
-*LAlt::Shift
 *RWin::Return
 *RCtrl::Return
 
@@ -75,35 +80,35 @@ RAlt & w::Send $
 RAlt & e::Send :
 RAlt & r::Send _
 RAlt & t::Send &
-RAlt & y::Send 3
-RAlt & u::Send /
-RAlt & i::Send 1
-RAlt & o::Send *
-RAlt & p::Send ``
-RAlt & [::Send ~
+RAlt & u::Send 3
+RAlt & i::Send /
+RAlt & o::Send 1
+RAlt & p::Send *
+RAlt & [::Send ``
+RAlt & ]::Send ~
 
 RAlt & a::Send -
 RAlt & s::Send (
 RAlt & d::Send .
 RAlt & f::Send "
 RAlt & g::Send <
-RAlt & h::Send >
-RAlt & j::Send `=
-RAlt & k::Send `,
-RAlt & l::Send `;
-RAlt & `;::Send )
-RAlt & '::Send ]
+RAlt & j::Send >
+RAlt & k::Send `=
+RAlt & l::Send `,
+RAlt & `;::Send `;
+RAlt & '::Send )
+RAlt & Enter::Send ]
 
 RAlt & z::Send 8
 RAlt & x::Send 4
 RAlt & c::Send {{}
 RAlt & v::Send {}}
 RAlt & b::Send 6
-RAlt & n::Send `%
-RAlt & m::Send {+}
-RAlt & ,::Send 5
-RAlt & .::Send 9
-RAlt & /::Send 7
+RAlt & m::Send `%
+RAlt & ,::Send {+}
+RAlt & .::Send 5
+RAlt & /::Send 9
+RAlt & LAlt::Send 7
 
 RAlt & Space::Send {Enter}
 
